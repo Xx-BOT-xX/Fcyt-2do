@@ -1,0 +1,45 @@
+# 5. Desarrollar una función que permita convertir un número romano en un número decimal.
+
+# num="MXX"
+# def romano_a_decimal(romano, decimal=0):
+#     if not romano:
+#         return decimal
+    
+#     tupla = {'I': 1, 'V': 5, 'X': 10, 'L': 50, 'C': 100, 'D': 500, 'M': 1000}
+    
+#     if len(romano) == 1 or tupla[romano[0]] >= tupla[romano[1]]:
+#         return romano_a_decimal(romano[1:], decimal + tupla[romano[0]])
+#     else:
+#         return romano_a_decimal(romano[2:], decimal + tupla[romano[1]] - tupla[romano[0]])
+
+# print("Número decimal equivalente:", romano_a_decimal(num))
+
+
+# 22. El problema de la mochila Jedi. Suponga que un Jedi (Luke Skywalker, Obi-Wan Kenobi, Rey u
+# otro, el que más le guste) está atrapado, pero muy cerca está su mochila que contiene muchos
+# objetos. Implementar una función recursiva llamada “usar la fuerza” que le permita al Jedi “con
+# ayuda de la fuerza” realizar las siguientes actividades:
+# a. sacar los objetos de la mochila de a uno a la vez hasta encontrar un sable de luz o que no
+# queden más objetos en la mochila;
+
+# b. determinar si la mochila contiene un sable de luz y cuantos objetos fueron necesarios sa-
+# car para encontrarlo;
+
+# c. Utilizar un vector para representar la mochila.
+
+# def usar_la_fuerza(mochila, objetos_sacados=0):
+#     if not mochila:
+#         print("No se encontró un sable de luz en la mochila.")
+#         return False, objetos_sacados
+
+#     primer_objeto = mochila[0]
+#     objetos_sacados += 1
+
+#     if primer_objeto == "sable de luz":
+#         print(f"Se encontró un sable de luz en la mochila después de sacar {objetos_sacados} objetos.")
+#         return True, objetos_sacados
+
+#     return usar_la_fuerza(mochila[1:], objetos_sacados)
+
+# mochila_ejemplo = ["comida", "botiquín", "sable de luz", "mapa"]
+# sable_encontrado, objetos_necesarios = usar_la_fuerza(mochila_ejemplo)
